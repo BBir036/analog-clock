@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+}
+.container{
+    border: 50px solid lightblue;
+    border-radius: 50%;
+    height: 550px;
+    width: 550px;
+    position: absolute;
+    top: 8%;
+    left: 30%;
+    box-shadow: 5px 5px 50px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock{
+    background-image: url(clock.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 420px;
+    width: 420px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 5px 50px gray inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hr, .min, .sec{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.hr{
+    height: 150px;
+    width: 150px;
+}
+.min{
+    height: 200px;
+    width: 200px;
+}
+.sec{
+    height: 250px;
+    width: 250px;
+}
+
+.hr::before{
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 100px;
+    background-color: darkblue;
+    z-index: 7;
+    border-radius: 50%;
+}
+
+.min::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 150px;
+    background-color:black;
+    z-index: 2;
+    border-radius: 50%;
+}
+.sec::before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 180px;
+    background-color: red;
+    z-index: 3;
+    border-radius: 50%;
+}
+
+.clock::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+#img{
+    border-radius: 50%;
+    height: 100px;
+    width: 80px;
+    background-image: url("https://clipart-library.com/img1/1562412.png");
+    background-size: cover;
+}
